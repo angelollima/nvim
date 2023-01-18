@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
+  },
   ["gruvbox-material"] = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/gruvbox-material",
@@ -144,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mini.move"] = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/mini.move",
+    url = "https://github.com/echasnovski/mini.move"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -153,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -173,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -198,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["pantran.nvim"] = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/pantran.nvim",
+    url = "https://github.com/potamides/pantran.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
