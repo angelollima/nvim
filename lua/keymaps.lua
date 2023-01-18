@@ -6,9 +6,12 @@ vim.g.mapleader = " "
 
 map("i", "pp", "<Esc>", opts) -- Go to "normal" mode
 
-map("n", "<Esc>", ":nohlsearch<CR>", opts)
+map("n", "<Esc>", ":nohlsearch<CR>", opts) -- Exit from open windows
+map("n", "<Esc>", ":q<CR>", opts) -- Exit
+map("n", "<Leader>qq", ":q!<CR>", opts) -- Force Exit (discard the operations made)
+map("n", "<Leader>qw", ":x<CR>", opts) -- Save and Exit
 
-map("n", "<C-q>", ":q<CR>", opts) -- Exit
+map("n", "9", "<C-$>", opts) -- Go to the end of the line
 
 map("n", "dw", 'vb"_d', opts) -- Delete a word backwards
 
@@ -21,6 +24,8 @@ map("i", "<C-p>", "<Esc>:w<CR>", opts) -- Exit and save
 
 map("n", "+", "<C-a>", opts) -- Increment a number
 map("n", "-", "<C-x>", opts) -- Decrement a number
+
+map("n", "<C-g>", ":Glow<CR>", opts) -- Preview current markdown buffer window
 
 -- Window
 map("n", "<Up>", ":resize -1<CR>", opts)
@@ -38,8 +43,8 @@ map("n", "<C-j>", "<C-w>j", opts) -- Goes to the bottom page
 map("n", "<C-k>", "<C-w>k", opts) -- Goes to the top page
 map("n", "<C-l>", "<C-w>l", opts) -- Goes to the right page
 
-map("n", "<A-j>", ":m .+1<CR>", opts) -- Increment one line
-map("n", "<A-k>", ":m .-2<CR>", opts) -- Decrement two lines
+-- map("n", "<A-k>", ":m .-2<CR>", opts) -- Decrement two lines
+-- map("n", "<A-j>", ":m .+1<CR>", opts) -- Increment one line
 
 map("n", "<Leader>fc", ":Format<CR>", opts)
 
@@ -50,9 +55,11 @@ map("n", "<Leader>bd", ":bd<CR>", opts) -- Delete page
 map("n", "<Leader>bn", ":bn<CR>", opts) -- Pass to the next page
 map("n", "<Leader>bp", ":bp<CR>", opts) -- Return to the next page
 
-map("n", "<Leader>ff", ":Telescope find_files<CR>", opts)
+map("n", "<leader>tr", ":Pantran.motion_translate<CR>i", opts) -- Open the translate window (insert mode)
+
+map("n", "<Leader>ff", ":Telescope find_files<CR>", opts) -- Open the search file window
 map("n", "<Leader>fg", ":Telescope live_grep<CR>", opts)
-map("n", "<Leader>fb", ":Telescope buffers<CR>", opts)
+map("n", "<Leader>fb", ":Telescope buffers<CR>", opts) -- Open the buffer window
 map("n", "<Leader>fh", ":Telescope help_tags<CR>", opts)
 
 map("n", "<Leader>do", ":lua vim.diagnostic.open_float()<CR>", opts)
