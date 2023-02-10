@@ -2,14 +2,19 @@ local background = vim.opt.background:get()
 local configuration = vim.fn["gruvbox_material#get_configuration"]()
 local palette = vim.fn["gruvbox_material#get_palette"](background, configuration.palette, configuration.colors_override)
 
+local colors = {
+  black  = '#080808',
+  white  = '#dadada',
+}
+
 theme = {
 	normal = {
-		a = { bg = palette.grey2[1], fg = palette.bg0[1], gui = "bold" },
-		b = { bg = palette.bg0[1], fg = palette.grey2[1] },
-		c = { bg = palette.bg0[1], fg = palette.grey2[1] },
-		x = { bg = palette.bg0[1], fg = palette.grey2[1], gui = "italic" },
-		y = { bg = palette.bg0[1], fg = palette.grey2[1] },
-		z = { bg = palette.bg0[1], fg = palette.grey2[1] },
+		a = { bg = colors.black, fg = palette.orange[1] ,gui = "bold" },
+		b = { bg = colors.black, fg = palette.grey2[1] },
+		c = { bg = palette.orange[1], fg = palette.grey2[1] },
+		x = { bg = colors.black, fg = colors.white, gui = "bold" },
+		y = { bg = palette.grey2[1], fg = colors.white },
+		z = { bg = palette.grey2[1], fg = colors.white },
 	},
 	insert = {
 		a = { bg = palette.green[1], fg = palette.bg0[1], gui = "bold" },
@@ -36,7 +41,7 @@ local settings = {
 		{
 			"mode",
 			fmt = function(str)
-				return str:sub(1, 1)
+				return str:sub(1, 1) -- Delete the sub function to receive the full string
 			end,
 		},
 	},
@@ -73,8 +78,8 @@ local settings = {
 			show_filename_only = false,
 			show_modified_status = true,
 			buffers_color = {
-				active = { fg = palette.grey2[1], gui = "bold" },
-				inactive = { fg = palette.grey0[1], gui = "bold" },
+				active = { fg = colors.black, gui = "bold" },
+				inactive = { fg = colors.white, gui = "italic" },
 			},
 		},
 	},

@@ -11,6 +11,8 @@ if vim.fn.has("termguicolors") then
 end
 
 set.background = "dark"
+
+g.gruvbox_material_transparent_background = 1
 g.gruvbox_material_palette = "mix"
 g.gruvbox_material_statusline_style = "mix"
 g.gruvbox_material_enable_italic = 1
@@ -20,6 +22,7 @@ g.gruvbox_material_diagnostic_virtual_text = "colored"
 g.gruvbox_material_sign_column_background = "none"
 cmd("colorscheme gruvbox-material")
 
+cmd("hi NvimTreeRootFolder guifg=#a89984")
 cmd("hi NvimTreeEmptyFolderName guifg=#a89984")
 cmd("hi NvimTreeFolderIcon guifg=#a89984")
 cmd("hi NvimTreeFolderName guifg=#a89984 gui=bold")
@@ -82,3 +85,4 @@ set.expandtab = true
 
 set.wrap = false
 set.splitright = true
+set.splitbelow = true

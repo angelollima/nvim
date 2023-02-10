@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -238,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  sniprun = {
+    loaded = true,
+    path = "/home/angelollima/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://github.com/michaelb/sniprun"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
