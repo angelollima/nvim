@@ -16,9 +16,11 @@ return require("packer").startup(function(use)
 
 	use("lewis6991/impatient.nvim")
 
-	use("andweeb/presence.nvim")
+	use("andweeb/presence.nvim") -- Presence to discord
 
 	use("sainnhe/gruvbox-material")
+
+  use { "catppuccin/nvim", as = "catppuccin" } -- Color
 
   use("norcalli/nvim-colorizer.lua") -- Add color
 
@@ -32,6 +34,8 @@ return require("packer").startup(function(use)
   })
 
   use('echasnovski/mini.move') -- Move lines around
+
+ use ({'michaelb/sniprun', run = 'bash ./install.sh'})
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -73,7 +77,7 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use("nvim-lualine/lualine.nvim")
+	use("nvim-lualine/lualine.nvim") -- Customize statusline
 
 	use({
 		"kyazdani42/nvim-tree.lua",
