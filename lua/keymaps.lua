@@ -11,6 +11,28 @@ map("n", "<Esc>", ":q<CR>", opts) -- Exit
 map("n", "<Leader>qq", ":q!<CR>", opts) -- Force Exit (discard the operations made)
 map("n", "<Leader>qw", ":x<CR>", opts) -- Save and Exit
 
+              -- Add/Remove ()
+map("n", "<Leader>0", "<cmd>norm ysiw)<CR>", opts)
+map("n", "<Leader>9", "<cmd>norm ds)<CR>", opts)
+              -- Add/Remove []
+map("n", "<Leader>]", "<cmd>norm ysiw]<CR>", opts)
+map("n", "<Leader>[", "<cmd>norm ds]<CR>", opts)
+              -- Add/Remove {}
+map("n", "<Leader>}", "<cmd>norm ysiw}<CR>", opts)
+map("n", "<Leader>{", "<cmd>norm ds}<CR>", opts)
+              -- Add/Remove ""
+map("n", '<Leader>"', '<cmd>norm ysiw"<CR>', opts)
+map("n", "<Leader>1", '<cmd>norm ds"<CR>', opts)
+              -- Add/Remove ''
+map("n", "<Leader>'", "<cmd>norm ysiw'<CR>", opts)
+map("n", "<Leader>2", "<cmd>norm ds'<CR>", opts)
+
+vim.keymap.set("n", "<Leader>i", "ysa", { remap = true }) -- Add around the first argument
+-- vim.keymap.set('n', '<Leader>3', 'cs', { remap = true })
+
+map("n", "<Leader>s", ":SnipRun<CR>", opts) -- Run the line where the cursor is
+map("x", "<Leader>a", ":'<,'>SnipRun<CR>", opts) -- Run the lines marked with visual mode
+
 map("n", "9", "<C-$>", opts) -- Go to the end of the line
 
 map("n", "dw", 'vb"_d', opts) -- Delete a word backwards
