@@ -29,13 +29,22 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-autopairs") -- Autocomplete (), {}, []
 
   use({
+    "jackMort/ChatGPT.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  })
+
+  use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
   })
 
   use('echasnovski/mini.move') -- Move lines around
 
- use ({'michaelb/sniprun', run = 'bash ./install.sh'})
+  use ({'michaelb/sniprun', run = 'bash ./install.sh'})
 
 	use({
 		"nvim-treesitter/nvim-treesitter",

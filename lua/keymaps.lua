@@ -39,7 +39,9 @@ map("n", "dw", 'vb"_d', opts) -- Delete a word backwards
 
 map("n", "<C-o>", "<Esc>ggVG<CR>", opts) -- Select all text
 
-map("i", "<C-H>", "<C-W>", opts) -- Ctrl + backspace
+map("i", "<C-backspace>", "<C-W>", opts) -- Ctrl + backspace
+
+map("n", "<Leader>c", ":ChatGPT<CR>", opts)
 
 map("n", "<C-p>", ":w<CR>", opts) -- Save
 map("i", "<C-p>", "<Esc>:w<CR>", opts) -- Exit and save
